@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <title>
+        My First Website
+    </title>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js"></script>
+    <style>
+        .row{
+            width:720px;
+            margin: 10px auto 10px auto ;
+    }
+        .image-container {
+            display: table-cell;
+            vertical-align: middle;
+            padding:20px;
+    }
+    </style>
+</head>
+
+<body style="background-color:#F9CADC">
+    
+    <div class="row">
+        <div class="image-container"><img id="cake" src="img/cakebefore.png" onmousedown="this.src='img/cakeafter.png';"onclick="this.src='img/cakebefore.png';"height="200" width="200"/></div>
+        <div class="image-container"><img id="glass" src="img/glassbefore.png" onmousedown="this.src='img/glassafter.png';"onmouseup="this.src='img/glassbefore.png';"height="200" width="200"/></div>
+        <div class="image-container"><img id="pancake" src="img/pancakebefore.png" onmousedown="this.src='img/pancakeafter.png';"onmouseup="this.src='img/pancakebefore.png';"height="200" width="200"/></div>
+    </div>
+
+    <div class="row">
+        <div class="image-container"><img id="moon" src="img/moonbefore.png" onmousedown="this.src='img/moonafter.png';"onmouseup="this.src='img/moonbefore.png';"height="200" width="200"/></div>
+        <div class="image-container"><img id="disco" src="img/discobefore.png" onmousedown="this.src='img/discoafter.png';"onmouseup="this.src='img/discobefore.png';"height="200" width="200"/></div>
+        <div class="image-container"><img id="popcorn" src="img/popcornbefore.png" onmousedown="this.src='img/popcornafter.png';"onmouseup="this.src='img/popcornbefore.png';"height="200" width="200"/></div>
+    </div>
+
+    <div class="row">
+        <div class="image-container"><img id="crystal" src="img/crystalbefore.png" onmousedown="this.src='img/crystalafter.png';"onmouseup="this.src='img/crystalbefore.png';"height="200" width="200"/></div>
+        <div class="image-container"><img id="bike" src="img/bikebefore.png" onmousedown="this.src='img/bikeafter.png';"onmouseup="this.src='img/bikebefore.png';"height="200" width="200"/></div>
+        <div class="image-container"><img id="sushi" src="img/sushibefore.png" onmousedown="this.src='img/sushiafter.png';"onmouseup="this.src='img/sushibefore.png';"height="200" width="200"/></div>
+    </div>
+
+    <script>
+        var sound1 = new buzz.sound("sound/cake.mp3");
+        var sound2 = new buzz.sound("sound/glass.mp3");
+        var sound3 = new buzz.sound("sound/pancake.mp3");
+        var sound4 = new buzz.sound("sound/moon.mp3");
+        var sound5 = new buzz.sound("sound/disco.mp3");
+        var sound6 = new buzz.sound("sound/popcorn.mp3");
+        var sound7 = new buzz.sound("sound/crystal.mp3");
+        var sound8 = new buzz.sound("sound/bike.mp3");
+        var sound9 = new buzz.sound("sound/sushi.mp3");
+    
+        window.onload = function() {
+                document.getElementById('cake').addEventListener('mousedown', function () {sound1.play(); });  
+                document.getElementById('glass').addEventListener('mousedown', function () {sound2.play(); });
+                document.getElementById('pancake').addEventListener('mousedown', function () {sound3.play(); });
+                document.getElementById('moon').addEventListener('mousedown', function () {sound4.play(); });
+                document.getElementById('disco').addEventListener('mousedown', function () {sound5.play(); });
+                document.getElementById('popcorn').addEventListener('mousedown', function () {sound6.play(); });
+                document.getElementById('crystal').addEventListener('mousedown', function () {sound7.play(); });
+                document.getElementById('bike').addEventListener('mousedown', function () {sound8.play(); });
+                document.getElementById('sushi').addEventListener('mousedown', function () {sound9.play(); });
+        }
+    </script>
+
+</body>
+
+
+</html>
